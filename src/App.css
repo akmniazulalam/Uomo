@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme{
+    --color-menu: #222222;
+    --color-bgColor: #F5E6E0;
+    --color-headingTitle: #C32929;
+
+
+    --font-jost: "Jost", "sans-serif";
+}
