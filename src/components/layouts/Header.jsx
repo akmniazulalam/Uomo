@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import { FaRegUser, FaRegHeart } from "react-icons/fa6";
 import { AiOutlineShopping } from "react-icons/ai";
-import { HiOutlineBars3CenterLeft } from "react-icons/hi2";
 import NavIcon from "../../assets/icons/NavIcon";
 
 const Header = () => {
@@ -41,7 +40,10 @@ const Header = () => {
                 <FiSearch className="text-[22px] cursor-pointer text-menu"/>
                 <FaRegUser className="text-[19px] cursor-pointer text-menu"/>
                 <FaRegHeart className="text-[21px] cursor-pointer text-menu"/>
-                <AiOutlineShopping className="text-[26px] cursor-pointer text-menu"/>
+                <div className="relative">
+                  <AiOutlineShopping className="text-[26px] cursor-pointer text-menu"/>
+                  <div className="absolute rounded-full h-[17px] w-[17px] text-[10px] font-jost font-medium text-white flex justify-center items-center bg-[#B9A16B] -bottom-1 -right-1">3</div>
+                </div>
                 <NavIcon/>
             </Flex>
           </div>

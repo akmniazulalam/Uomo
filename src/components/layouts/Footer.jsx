@@ -12,7 +12,7 @@ import { GrUp } from "react-icons/gr";
 
 const Footer = () => {
   return (
-    <section className="pt-24 pb-8 bg-footerBg">
+    <section className="pt-24 pb-8 bg-footerBg mt-[100px]">
       <Container>
         <div className="grid grid-cols-[27%_16%_16%_16%_25%]">
           <div className="">

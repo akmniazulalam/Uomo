@@ -13,11 +13,15 @@ import Slider from "react-slick";
 
 const Banner = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-  const [animate, setAnimate] = useState(false);
+  const [textAnimate, setTextAnimate] = useState(false);
+  const [imageAnimate, setImageAnimate] = useState(false);
 
   useEffect(() => {
     // Trigger animation on initial render
-    setAnimate(true);
+    setTextAnimate(true);
+    setTimeout(() => {
+      setImageAnimate(true)
+    }, 300)
   }, []);
 
   const settings = {
@@ -29,15 +33,16 @@ const Banner = () => {
     arrows: false,
     pauseOnHover: false,
     fade: true,
-    // waitForAnimate: false,
     speed: 2000,
     autoplaySpeed: 5000,
     beforeChange: (oldIndex, newIndex) => {
-      setAnimate(false); // Reset animation before changing slide
+      setTextAnimate(false);
+      setImageAnimate(false)
       setActiveSlide(newIndex);
     },
     afterChange: () => {
-      setAnimate(true); // Trigger animation after slide is shown
+      setTextAnimate(true);
+      setTimeout(() => setImageAnimate(true), 300);
     },
     customPaging: (i) => (
       <div className="w-[35px] h-[35px] flex items-center justify-center relative"></div>
@@ -58,7 +63,7 @@ const Banner = () => {
             <div className="pt-[273px] pb-[283px] relative">
               <div
                 className={`transition-all duration-700 ease-in-out transform ${
-                  activeSlide === 0 && animate
+                  activeSlide === 0 && textAnimate
                     ? "translate-y-0 opacity-100"
                     : "translate-y-10 opacity-0"
                 }`}
@@ -93,14 +98,14 @@ const Banner = () => {
                 src={slideOne}
                 alt={"slideshow-character1.png"}
                 className={`absolute bottom-0 left-[54%] transition-all duration-700 ease-in-out ${
-                  activeSlide === 0 && animate
+                  activeSlide === 0 && imageAnimate
                     ? "translate-y-0 opacity-100"
                     : "translate-y-10 opacity-0"
                 }`}
               />
               <div className="relative">
                 <p className={`uppercase font-bold text-[120px] text-transparent rotate-90 summer absolute bottom-[0%] left-[72%] w-[550px] transition-all duration-700 ease-in-out ${
-                  activeSlide === 0 && animate
+                  activeSlide === 0 && imageAnimate
                     ? "translate-y-0 opacity-100"
                     : "translate-y-10 opacity-0"
                 }`}>
@@ -118,7 +123,7 @@ const Banner = () => {
             <div className="pt-[273px] pb-[283px] relative">
               <div
                 className={`transition-all duration-700 ease-in-out transform ${
-                  activeSlide === 1 && animate
+                  activeSlide === 1 && textAnimate
                     ? "translate-y-0 opacity-100"
                     : "translate-y-10 opacity-0"
                 }`}
@@ -157,7 +162,7 @@ const Banner = () => {
                 src={slideTwo}
                 alt={"slideshow-character2.png"}
                 className={`absolute -bottom-8 left-[60%] transition-all duration-700 ease-in-out ${
-                  activeSlide === 1 && animate
+                  activeSlide === 1 && imageAnimate
                     ? "translate-x-0 opacity-100"
                     : "translate-x-10 opacity-0"
                 }`}
