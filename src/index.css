@@ -43,7 +43,29 @@
 .slick-dots li.slick-active div::before {
   background-color: #262626;
 }
-/* .slick-dots li div::before {
-  transition: opacity 0.3s ease;
-} */
 
+.limited-slider .slick-dots {
+  position: absolute !important;
+  bottom: -50px !important;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 !important;
+}
+.limited-slider .slick-dots li {
+    margin: 0 10px;
+}
+.limited-slider .slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #262626;
+    border-radius: 50%;
+    outline: 2px solid #262626;
+    padding: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.limited-slider .slick-dots li button:before {
+    opacity: 1;
+    color: #DDC2BD;
+    padding-top: 3px;
+}

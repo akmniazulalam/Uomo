@@ -107,6 +107,8 @@ const TrendyProducts = () => {
               hoverSrc={productOneHover}
               normalPrice={"29"}
               productTitle={"Cropped Faux Leather Jacket"}
+              isReview
+              forDiscount
             />
           </div>
           <div className="mix new best">
