@@ -3,6 +3,7 @@ import React from "react";
 const NavIcon = () => {
   return (
     <svg
+      className="cursor-pointer"
       width="25"
       height="18"
       viewBox="0 0 25 18"
