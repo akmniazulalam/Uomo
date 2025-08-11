@@ -86,13 +86,6 @@ const products = [
         category: "specialOffers",
         image: "/src/assets/product_5-1.jpg"
     },
-    // {
-    //     id: 13,
-    //     name: "Basic Crew Neck Tee",
-    //     price: 44,
-    //     category: "specialOffers",
-    //     image: "/src/assets/product_6-1.jpg"
-    // },
 ]
 
 export default products
